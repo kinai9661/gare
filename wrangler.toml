@@ -1,0 +1,7 @@
+name = "gare"
+type = "javascript"
+account_id = "YOUR_ACCOUNT_ID"
+workers_dev = true
+compatibility_date = "2023-01-01"
+
+main = "./src/worker.ts"

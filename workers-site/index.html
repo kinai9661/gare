@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gare - Grok Scraper Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🕷️ Gare Scraper Dashboard</h1>
+      <p class="subtitle">grok.com 爬蟲數據分析平台</p>
+    </header>
+
+    <section id="stats" class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-label">已下載頁面</div>
+        <div class="stat-value" id="pages-count">-</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">已下載資源</div>
+        <div class="stat-value" id="assets-count">-</div>
+      </div>
+      <div class="stat-card error">
+        <div class="stat-label">錯誤數量</div>
+        <div class="stat-value" id="errors-count">-</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-label">總大小 (MB)</div>
+        <div class="stat-value" id="size-count">-</div>
+      </div>
+    </section>
+
+    <section id="metadata" class="card">
+      <h2>爬蟲元數據</h2>
+      <table id="meta-table">
+        <tbody>
+          <tr><td>目標 URL</td><td id="meta-url">-</td></tr>
+          <tr><td>網域</td><td id="meta-domain">-</td></tr>
+          <tr><td>爬蟲時間</td><td id="meta-cloned-at">-</td></tr>
+          <tr><td>執行時長</td><td id="meta-duration">-</td></tr>
+          <tr><td>工具</td><td id="meta-tool">-</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="errors-section" class="card">
+      <h2>錯誤記錄 <span id="error-count-badge" class="badge">0</span></h2>
+      <div class="filter-bar">
+        <input type="text" id="error-search" placeholder="搜尋 URL..." />
+        <select id="error-filter">
+          <option value="">所有錯誤</option>
+          <option value="403">403 Forbidden</option>
+          <option value="404">404 Not Found</option>
+          <option value="500">500 Internal Server Error</option>
+        </select>
+      </div>
+      <div class="table-wrapper">
+        <table id="errors-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>URL</th>
+              <th>錯誤</th>
+              <th>時間</th>
+            </tr>
+          </thead>
+          <tbody id="errors-tbody">
+            <tr><td colspan="4" class="loading">載入中...</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="pagination" id="pagination"></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
