@@ -13,6 +13,39 @@
       <p class="subtitle">grok.com 爬蟲數據分析平台</p>
     </header>
 
+    <!-- grok.com 登入表單 -->
+    <section id="login-section" class="card">
+      <h2>🔐 grok.com 登入設定</h2>
+      <p class="login-desc">輸入您的 grok.com 驗證資訊以繞過 403 錯誤</p>
+      <form id="login-form" class="login-form">
+        <div class="form-group">
+          <label for="cookie-input">Cookie String</label>
+          <textarea
+            id="cookie-input"
+            name="cookie"
+            placeholder="例如：session=abc123; other=xyz; path=/; domain=.grok.com"
+            rows="3"
+          ></textarea>
+          <small>從瀏覽器開發者工具��製完整的 Cookie 字串</small>
+        </div>
+        <div class="form-group">
+          <label for="token-input">Bearer Token (可選)</label>
+          <input
+            type="text"
+            id="token-input"
+            name="token"
+            placeholder="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+          />
+          <small>如果有 JWT 或 API token，請填入</small>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn-primary">儲存驗證資訊</button>
+          <button type="button" id="test-auth-btn" class="btn-secondary">測試連線</button>
+        </div>
+        <div id="auth-status" class="status-message"></div>
+      </form>
+    </section>
+
     <section id="stats" class="stats-grid">
       <div class="stat-card">
         <div class="stat-label">已下載頁面</div>

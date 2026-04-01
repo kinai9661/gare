@@ -8,3 +8,9 @@ main = "./src/worker.ts"
 [assets]
 directory = "./workers-site"
 binding = "ASSETS"
+
+# KV Namespace for storing auth config and scraping data
+[[kv_namespaces]]
+binding = "AUTH_STORE"
+id = "placeholder_replace_with_real_id"
+preview_id = "preview_placeholder"
