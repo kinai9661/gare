@@ -1,6 +1,6 @@
 name = "gare"
 type = "javascript"
-account_id = "YOUR_ACCOUNT_ID"
+account_id = "a214a33f8e5cb4025f886ee9efd34729"
 workers_dev = true
 compatibility_date = "2023-01-01"
 
