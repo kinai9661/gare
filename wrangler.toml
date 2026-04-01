@@ -12,5 +12,5 @@ binding = "ASSETS"
 # KV Namespace for storing auth config and scraping data
 [[kv_namespaces]]
 binding = "AUTH_STORE"
-id = "placeholder_replace_with_real_id"
-preview_id = "preview_placeholder"
+id = "ab0e65eb43364d6ca83d3e95638c1ba1"
+preview_id = "ab0e65eb43364d6ca83d3e95638c1ba1"
