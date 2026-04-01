@@ -7,3 +7,4 @@ main = "./src/worker.ts"
 
 [assets]
 directory = "./workers-site"
+binding = "ASSETS"
